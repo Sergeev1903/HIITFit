@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  HIITFit
+
+  Created by Артем Сергеев on 10.09.2023.
+*/
+
+
+/* exercise */
+"Burpee" = "Берпі";
+
+/* invitation to exercise */
+"Get Fit" = "Приведи тіло в порядок";
+
+/* invitation */
+"Get Started" = "Почати";
+
+/* view user activity */
+"History" = "Історія";
+
+/* exercise */
+"Squat" = "Присідання";
+
+/* begin exercise / mark as finished */
+"Start/Done" = "Почати/Готово";
+
+/* exercise */
+"Step Up" = "Активізувати";
+
+/* yoga stretch */
+"Sun Salute" = "Салют Сонцю";
+
+/* greeting */
+"Welcome" = "Ласкаво просимо";
