@@ -3,12 +3,11 @@ import SwiftUI
 import AVKit
 
 struct ExerciseView: View {
-
+  
   @State private var timerDone = false
   @State private var showTimer = false
-  @State private var rating = 0
   @State private var showSuccess = false
-
+  
   @Binding var selectedTab: Int
 
   @EnvironmentObject var history: HistoryStore
@@ -39,10 +38,10 @@ struct ExerciseView: View {
             }
             Button("Done") {
               history.addDoneExercise(Exercise.exercises[index].exerciseName)
-
+              
               timerDone = false
               showTimer.toggle()
-
+              
               if lastExercise {
                 showSuccess.toggle()
               } else {
@@ -60,7 +59,7 @@ struct ExerciseView: View {
             TimerView(timerDone: $timerDone)
           }
           Spacer()
-          RatingView(rating: $rating) // Move RatingView below Spacer
+          RatingView(exerciseIndex: index)
             .padding()
           Spacer()
           Button("History") { }
