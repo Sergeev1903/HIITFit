@@ -20,7 +20,7 @@ struct WelcomeView: View {
         .padding(.bottom)
       }
       VStack {
-        HStack(alignment: .bottom) {
+        HStack(alignment: .center) {
           VStack(alignment: .leading) {
             Text(NSLocalizedString("Get Fit", comment: "invitation to exercise"))
               .font(.largeTitle)
@@ -28,10 +28,7 @@ struct WelcomeView: View {
               .font(.headline)
           }
           Image("step-up")
-          //            .resizable()
-          //            .aspectRatio(contentMode: .fit)
-          //            .frame(width: 240, height: 240)
-            .resizedToFill(width: 240, height: 240)
+            .resizedToFill(width: 200, height: 200)
             .clipShape(Circle())
         }
         Button(action: { selectedTab = 0}) {

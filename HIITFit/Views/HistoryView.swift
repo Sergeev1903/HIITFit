@@ -11,6 +11,8 @@ struct HistoryView: View {
       
       Button(action: { showHistory.toggle() }) {
         Image(systemName: "xmark.circle")
+          .resizedToFill(width: 30, height: 30)
+          .padding()
       }
       
       VStack {
