@@ -1,9 +1,7 @@
-
 import SwiftUI
 
 @main
 struct HIITFitApp: App {
-  
   @StateObject private var historyStore: HistoryStore
   @State private var showAlert = false
   
@@ -16,7 +14,6 @@ struct HIITFitApp: App {
       historyStore = HistoryStore()
       showAlert = true
     }
-    
     _historyStore = StateObject(wrappedValue: historyStore)
   }
   
@@ -24,12 +21,17 @@ struct HIITFitApp: App {
     WindowGroup {
       ContentView()
         .environmentObject(historyStore)
+        .onAppear {
+          print(FileManager.default.urls(
+            for: .documentDirectory,
+            in: .userDomainMask))
+        }
         .alert(isPresented: $showAlert) {
           Alert(
             title: Text("History"),
             message: Text(
               """
-              Unfortunately we can’t load your past history.
+              Unfortunately we can't load your past history.
               Email support:
                 support@xyz.com
               """))

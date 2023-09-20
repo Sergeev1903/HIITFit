@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 extension Image {
@@ -6,7 +5,8 @@ extension Image {
   ///   - parameters:
   ///     - width: Frame width.
   ///     - height: Frame height.
-  func resizedToFill(width: CGFloat, height: CGFloat) -> some View {
+  func resizedToFill(width: CGFloat, height: CGFloat)
+  -> some View {
     self
       .resizable()
       .aspectRatio(contentMode: .fill)
